@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carros Clássicos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Clássicos dos Carros</h1>
+
+    <div class="tabs">
+        <button class="tab-button active" onclick="showTab('skyline')">Nissan Skyline</button>
+        <button class="tab-button" onclick="showTab('supra')">Toyota Supra</button>
+        <button class="tab-button" onclick="showTab('mustang')">Ford Mustang</button>
+    </div>
+
+    <div id="skyline" class="tab-content active">
+        <h2>Nissan Skyline R34</h2>
+        <img src="img/e3eacd9e3878ea96db8b104512ebe02b.jpg" alt="Skyline R34" width="300">
+        <p>O Nissan Skyline R34 é um ícone japonês conhecido por seu desempenho e presença no cinema.</p>
+    </div>
+
+    <div id="supra" class="tab-content">
+        <h2>Toyota Supra MK4</h2>
+        <img src="img/3723004.jpg" alt="Toyota Supra" width="300">
+        <p>O Supra é famoso pelo seu motor 2JZ, sendo um dos carros mais modificados do mundo.</p>
+    </div>
+
+    <div id="mustang" class="tab-content">
+        <h2>Ford Mustang 1967</h2>
+        <img src="img/676791.jpg" alt="Ford Mustang" width="300">
+        <p>Um dos muscle cars mais clássicos dos EUA, com visual agressivo e motor potente.</p>
+    </div>
+</div>
+
+<script>
+    function showTab(tabId) {
+        // Oculta todos os conteúdos
+        const contents = document.querySelectorAll('.tab-content');
+        contents.forEach(content => content.classList.remove('active'));
+
+        // Desativa todos os botões
+        const buttons = document.querySelectorAll('.tab-button');
+        buttons.forEach(button => button.classList.remove('active'));
+
+        // Mostra a aba clicada
+        document.getElementById(tabId).classList.add('active');
+        event.currentTarget.classList.add('active');
+    }
+</script>
+
+</body>
+</html>
